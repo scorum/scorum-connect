@@ -1,0 +1,21 @@
+.choose-account {
+  .item {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(158, 158, 158, 0.2);
+    }
+  }
+
+  .avatar {
+
+  }
+
+  .description {
+    margin-left: 20px;
+  }
+}

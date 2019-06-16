@@ -1,0 +1,46 @@
+.button {
+  box-shadow: 0 0 0 1px #e0e0e0 inset;
+  color: rgba(0,0,0,0.5);
+
+  padding: .375rem 1rem;
+  font-size: .875rem;
+  line-height: 1.43;
+  border-radius: .25rem;
+  min-width: 76px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 0 solid transparent;
+
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: rgba(158,158,158,0.2);
+  }
+
+  &.button-primary {
+    color: #00b377;
+    box-shadow: 0 0 0 1px #00b377 inset;
+    background-image: none;
+    border-color: #00b377;
+    &:hover {
+      background: none;
+    }
+  }
+
+  .button-secondary {
+    // ...
+  }
+}

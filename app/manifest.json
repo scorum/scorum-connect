@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "ScorumConnect",
+  "short_name": "SC",
+  "version": "0.1",
+  "description": "ScorumConnect extenstion",
+  "minimum_chrome_version": "61",
+  "permissions": [
+    "nativeMessaging",
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs"
+	],
+	"optional_permissions": [
+		"http://*/*",
+		"https://*/*"
+  ],
+  "icons": {
+    "16": "images/icon_32.png",
+    "32": "images/icon_32.png",
+    "48": "images/icon_32.png",
+    "64": "images/icon_32.png",
+    "128": "images/icon_32.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["file://*/*", "http://*/*", "https://*/*"],
+      "js": ["build/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "popup.html"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["build/background.js"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": "images/icon_32.png",
+    "default_popup": "popup.html",
+    "browser_style": true
+  }
+}

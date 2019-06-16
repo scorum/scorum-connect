@@ -1,0 +1,62 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "plugins": ["react"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true,
+    "webextensions": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  },
+  "rules": {
+    "react/jsx-no-bind": [2, { "ignoreRefs": true }],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "no-underscore-dangle": 0,
+    "lines-between-class-members": 0,
+    "implicit-arrow-linebreak": 0,
+    "comma-dangle": ["error", "always-multiline"],
+    "space-in-parens": 2,
+    "space-before-function-paren": 0,
+    "semi": [2, "always"],
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-debugger": 1,
+    "no-console": 1,
+    "no-mixed-operators": 0,
+    "no-multiple-empty-lines": ["error", { "max": 2 } ],
+    "no-confusing-arrow": 0,
+    "no-param-reassign": [
+      2,
+      {
+        "props": false
+      }
+    ],
+    "no-array-constructor": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0
+  }
+}

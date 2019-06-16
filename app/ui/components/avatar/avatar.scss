@@ -1,0 +1,32 @@
+.avatar {
+  border-radius: 50%!important;
+  margin-left: 14px;
+  position: relative;
+  cursor: pointer;
+
+  .photo-overlay {
+    opacity: 0;
+  }
+
+  .photo {
+    border-radius: 50%!important;
+  }
+
+  &:hover {
+    background-color: #505261;
+    cursor: pointer;
+  }
+
+  &:hover .photo {
+    opacity: 0.3;
+  }
+
+  &:hover .photo-overlay {
+    opacity: 1;
+    position: absolute;
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

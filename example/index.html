@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ScorumConnect Sign Example</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="example">
+    <h1>ScorumConnect Sign Example</h1>
+
+    <div class="sign-transaction">
+      <p>Operations:</p>
+      <select id="operations">
+        <option value="accountWitnessVote">accountWitnessVote</option>
+      </select>
+      <p>Params:</p>
+      <textarea id="params" width="200" height="300">
+{
+  "account": "andrew",
+  "witness": "andrew",
+  "approve": true
+}
+      </textarea>
+    </div>
+
+    <button id="sign-btn">Sign transaction</button>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

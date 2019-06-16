@@ -1,0 +1,42 @@
+.header {
+  align-items: center;
+  background: linear-gradient(90deg,#242739,#121526);
+  position: relative;
+  z-index: 26;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  flex: 0 0 auto;
+  padding: 12px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.header__logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header__scorum-logo {
+  width: 42px;
+  cursor: pointer;
+}
+
+.header__account-menu-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.headers__settings {
+  margin-left: 20px;
+  cursor: pointer;
+}

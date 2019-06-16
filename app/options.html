@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <meta charset="utf-8">
+  <title>ScorumConnect options</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+    /* Increase spacing between sections */
+    h2 ~ h2,
+    form ~ form {
+      margin-top: 2em;
+    }
+  </style>
+  <form>
+    <p>
+      <label>
+        <input type="checkbox" name="previewCount">
+        Show notification number in blue bubble
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="notifyTransactions">
+        Show only transaction notifications
+      </label>
+    </p>
+    <p>
+      Show notifications: <br>
+      <label><input type="radio" name="dropdown" value="yes"> Yes</label><br>
+      <label><input type="radio" name="dropdown" value="compact"> Yes, compact (default)</label><br>
+      <label><input type="radio" name="dropdown" value="no"> No</label>
+    </p>
+  </form>
+  <script src="build/options.js"></script>

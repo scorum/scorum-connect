@@ -1,0 +1,51 @@
+{
+  "name": "scorum-connect",
+  "version": "1.0.0",
+  "description": "Show your scorum accounts and store private keys for future transactions from 3rd party applications",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext js app --ignore-pattern app/build",
+    "release": "npm-run-all update-version --parallel upload:*",
+    "upload:amo": "cd app && web-ext-submit",
+		"upload:cws": "cd app && webstore upload --auto-publish",
+    "update-version": "dot-json app/manifest.json version $TRAVIS_TAG",
+    "background:build": "parcel build app/background.js -d app/build/ -o background.js",
+    "background:watch": "parcel watch app/background.js -d app/build/ -o background.js --no-hmr",
+    "content:build": "parcel build app/content.js -d app/build/ -o content.js",
+    "content:watch": "parcel watch app/content.js -d app/build/ -o content.js --no-hmr",
+    "options:build": "parcel build app/options.js -d app/build/ -o options.js",
+    "popup:build": "parcel build app/popup.js -d app/build/ -o popup.js",
+    "popup:watch": "parcel watch app/popup.js -d app/build/ -o popup.js --no-hmr",
+    "all:build": "npm-run-all --parallel build:popup build:background build:options build:content",
+    "example:watch": "parcel example/index.html"
+  },
+  "author": "Andrew Avdeev",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "chrome-webstore-upload-cli": "^1.2.0",
+    "dot-json": "^1.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.18.0",
+    "web-ext-submit": "^3.0.0"
+  },
+  "dependencies": {
+    "@scorum/scorum-js": "^2.10.0",
+    "@scorum/scorum-side-js": "^1.20.1",
+    "extensionizer": "^1.0.1",
+    "lodash": "^4.17.11",
+    "preact": "^8.4.2",
+    "redux-zero": "^5.0.2",
+    "webext-options-sync": "^0.15.5"
+  }
+}

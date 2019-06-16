@@ -1,0 +1,15 @@
+.header__network-component-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__network-component-wrapper .scorum-network {
+  border: 2px solid #cdcdcd;
+  border-radius: 82px;
+  padding: 7px 3px;
+  flex: 0 0 auto;
+  display: flex;
+  cursor: pointer;
+  width: 185px;
+}
