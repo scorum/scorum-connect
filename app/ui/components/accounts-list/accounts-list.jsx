@@ -6,6 +6,8 @@ import { removeAccount } from '../../store/actions';
 import { floorLocalFloatAmount, floorLocalAmountToK } from '../../../helpers/balance';
 import './accounts-list.scss';
 
+import { getAccounts } from '../../services/scorum';
+
 class AccountsListUI extends Component {
   constructor() {
     super();
@@ -13,8 +15,19 @@ class AccountsListUI extends Component {
     this.removeAccount = this.removeAccount.bind(this);
   }
 
-  componentDidMount() {
-    // ...
+  async componentDidMount() {
+    const { accounts } = this.props;
+    const keys = Object.keys(accounts);
+
+    if(!keys)
+      return;
+
+    const fetchedAccounts = await getAccounts(keys);
+    keys.forEach(k=>{
+      accounts[k].vp = fetchedAccounts.find(x=>x.name == k).voting_power;
+    });
+
+    this.setState(accounts);
   }
 
   componentWillUnmount() {
