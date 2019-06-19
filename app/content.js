@@ -1,13 +1,13 @@
- import '@babel/polyfill';
+import '@babel/polyfill';
 
 // // import OptionsSync from 'webext-options-sync';
- import { fs } from 'fs';
- import { h, render } from 'preact';
- import { Provider } from "redux-zero/preact";
+import { fs } from 'fs';
+import { h, render } from 'preact';
+import { Provider } from "redux-zero/preact";
 
- import { preparedStore } from "./ui/store/store";
- import { Content } from './ui/Content';
- import { launchUi } from './content-core';
+import { preparedStore } from "./ui/store/store";
+import { Content } from './ui/Content';
+import { launchUi } from './content-core';
 
 const INJECTED_ELEMENT_ID = 'scorumconnect-extension';
 
