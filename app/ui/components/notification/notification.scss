@@ -59,6 +59,7 @@
     .notification-content {
       display: flex!important;
       width: 100%;
+      flex-direction: column;
     }
 
     .notification-button-wrapper {
