@@ -1,6 +1,6 @@
 import '@babel/polyfill';
 
-// // import OptionsSync from 'webext-options-sync';
+// import OptionsSync from 'webext-options-sync';
 import { fs } from 'fs';
 import { h, render } from 'preact';
 import { Provider } from "redux-zero/preact";
