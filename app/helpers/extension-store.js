@@ -23,7 +23,10 @@ export class ExtensionStore {
 
   // Returns all of the keys currently saved
   async get() {
-    if (!this.isSupported) return undefined;
+    if (!this.isSupported) {
+      return undefined;
+    }
+
     const result = await ExtensionStore._get();
     // extension.storage.local always returns an obj
     // if the object is empty, treat it as undefined

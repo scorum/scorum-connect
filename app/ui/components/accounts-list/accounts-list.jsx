@@ -6,15 +6,12 @@ import { removeAccount } from '../../store/actions';
 import { floorLocalFloatAmount, floorLocalAmountToK } from '../../../helpers/balance';
 import './accounts-list.scss';
 
+
 class AccountsListUI extends Component {
   constructor() {
     super();
 
     this.removeAccount = this.removeAccount.bind(this);
-  }
-
-  componentDidMount() {
-    // ...
   }
 
   componentWillUnmount() {

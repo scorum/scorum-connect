@@ -7,7 +7,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "lint": "eslint --ext js app --ignore-pattern app/build",
+    "lint": "eslint --ext js,jsx app --ignore-pattern app/build",
     "release": "npm-run-all update-version --parallel upload:*",
     "upload:amo": "cd app && web-ext-submit",
     "upload:cws": "cd app && webstore upload --auto-publish",

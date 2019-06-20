@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
-import { h } from "preact";
-import { Connect } from "redux-zero/preact";
+import { h } from 'preact';
+import { Connect } from 'redux-zero/preact';
 
 export function withStore(actions = {}) {
   return Child => props => (

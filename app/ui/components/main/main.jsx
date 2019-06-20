@@ -28,7 +28,7 @@ class MainUI extends Component {
         const profile = await getProfile(username);
 
         this.props.addAccount({
-          username: username,
+          username,
           key: privateKey,
           scr: bcProfile.balance.slice(0, -4),
           sp: bcProfile.scorumpower.slice(0, -3),
@@ -50,7 +50,7 @@ class MainUI extends Component {
   }
 
   render() {
-    return(
+    return (
       <div class="main-container">
         <div class="main-container__inner">
           <AccountsList />

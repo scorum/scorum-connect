@@ -26,7 +26,7 @@ export const AccountItem = ({ username, sp, scr, vp, avatar, removeAccount }) =>
           <span class="balance">{vp}</span>
         </div>
         <div class="view-balance__container view-balance__account">
-          <span class="vertical-divider mr-6"></span>
+          <span class='vertical-divider mr-6' />
           <Avatar url={avatar} onClick={removeAccount} withOverlay />
         </div>
       </div>

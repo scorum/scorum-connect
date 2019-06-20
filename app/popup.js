@@ -1,9 +1,9 @@
 import '@babel/polyfill';
 
 import { h, render } from 'preact';
-import { Provider } from "redux-zero/preact";
+import { Provider } from 'redux-zero/preact';
 
-import { preparedStore } from "./ui/store/store";
+import { preparedStore } from './ui/store/store';
 import { Popup as PopupUI } from './ui/Popup';
 import { launchUi } from './popup-core';
 

@@ -1,11 +1,11 @@
 import '@babel/polyfill';
 
 // import OptionsSync from 'webext-options-sync';
-import fs from 'fs';
+import { fs } from 'fs';
 import { h, render } from 'preact';
-import { Provider } from "redux-zero/preact";
+import { Provider } from 'redux-zero/preact';
 
-import { preparedStore } from "./ui/store/store";
+import { preparedStore } from './ui/store/store';
 import { Content } from './ui/Content';
 import { launchUi } from './content-core';
 
@@ -15,7 +15,7 @@ let contentInjected = false;
 
 function injectApp(localStore){
   const css = fs.readFileSync(`${__dirname}/build/content.css`, 'utf8');
-  const injectDiv = document.createElement("div");
+  const injectDiv = document.createElement('div');
   const shadowRoot = injectDiv.attachShadow({ mode: 'open' });
   shadowRoot.innerHTML = // just using template string
   `
