@@ -7,10 +7,10 @@ function sign() {
   const params = paramsTextarea.value;
 
   window.postMessage({
-    type: "SC_SIGN_AND_BROADCAST",
+    type: 'SC_SIGN_AND_BROADCAST',
     data: {
-      method: method,
+      method,
       params: JSON.parse(params),
     },
-  }, "*");
+  }, '*');
 }
