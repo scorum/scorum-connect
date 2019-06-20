@@ -2,8 +2,10 @@ import { h, Component } from 'preact';
 
 import { AccountItem } from './account-item';
 import { withStore } from '../../hocs/with-store';
-import { removeAccount } from '../../store/actions';
+import { removeAccount, refreshProfiles } from '../../store/actions';
 import { floorLocalFloatAmount, floorLocalAmountToK } from '../../../helpers/balance';
+import { getAccounts } from '../../services/scorum';
+
 import './accounts-list.scss';
 
 
@@ -12,6 +14,19 @@ class AccountsListUI extends Component {
     super();
 
     this.removeAccount = this.removeAccount.bind(this);
+  }
+
+  async componentDidMount() {
+    const { accounts } = this.props;
+    const keys = Object.keys(accounts);
+
+    if (!keys) {
+      return;
+    }
+
+    const fetchedAccounts = await getAccounts(keys);
+
+    this.props.refreshProfiles(fetchedAccounts);
   }
 
   componentWillUnmount() {
@@ -50,4 +65,4 @@ class AccountsListUI extends Component {
   }
 }
 
-export const AccountsList = withStore({ removeAccount })(AccountsListUI);
+export const AccountsList = withStore({ removeAccount, refreshProfiles })(AccountsListUI);

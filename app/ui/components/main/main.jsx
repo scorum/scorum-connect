@@ -27,20 +27,7 @@ class MainUI extends Component {
         const bcProfile = head(await getAccounts([username]));
         const profile = await getProfile(username);
 
-        this.props.addAccount({
-          username,
-          key: privateKey,
-          scr: bcProfile.balance.slice(0, -4),
-          sp: bcProfile.scorumpower.slice(0, -3),
-          vp: bcProfile.voting_power,
-          displayName: profile.display_name,
-          avatar: profile.avatar_url,
-          cover_url: profile.cover_url,
-          bio: profile.bio,
-          followers_count: profile.followers_count,
-          following_count: profile.following_count,
-          location: profile.location,
-        });
+        this.props.addAccount({ username, privateKey, bcProfile, profile });
       }
     }
   }
