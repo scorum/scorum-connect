@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/scorum/scorum-connect.svg?style=svg)](https://circleci.com/gh/scorum/scorum-connect)
+
 # Scorum Connect 📡
 > Browser extension - Show your scorum accounts and store private keys for future transactions from 3rd party applications
 
