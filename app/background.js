@@ -53,7 +53,7 @@ async function chooseListener(action, data) {
     // TODO: check result or catch error
     const res = await signAndBroadcast(privateKey, data.trx.method, data.trx.params);
     if (res) {
-      result.response = "All OK!";
+      result.response = 'All OK!';
     }
     return result;
   }

@@ -29,7 +29,7 @@ const ChooseAccountUI = ({ accounts, trx, notificationShowed, hideNotification, 
 
   // TODO: remove arrow function (onClick) and change to link
   return (
-    <div style={ notificationShowed ? { display: 'block' } : { display: 'none' }}>
+    <div style={notificationShowed ? { display: 'block' } : { display: 'none' }}>
       <Notification className="choose-account">
         {
           accountsKeys.length ? accountsKeys.map(acc => (

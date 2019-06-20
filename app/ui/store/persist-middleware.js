@@ -67,7 +67,7 @@ function persist(
 ) {
   mapStorageToState({}, config, (err, state) => {
     if (err) {
-      config.storage.removeItem(key_prefix + config.key, _err => {
+      config.storage.removeItem(key_prefix + config.key, (_err) => {
         cb(_err, state);
       });
     } else {
@@ -76,15 +76,13 @@ function persist(
   });
 
   // return middleware
-  return store => next => action => {
+  return store => next => (action) => {
     const r = next(action);
     if (r && typeof r.then === 'function') {
-      return next(action).then(d => {
-        return mapStateToStorage(store, config).then(() => Promise.resolve(d));
-      });
-    } else {
-      return mapStateToStorage(store, config).then(() => Promise.resolve(r));
+      return next(action).then(d => mapStateToStorage(store, config).then(() => Promise.resolve(d)));
     }
+
+    return mapStateToStorage(store, config).then(() => Promise.resolve(r));
   };
 }
 
