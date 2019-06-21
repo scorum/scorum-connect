@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 
 // import OptionsSync from 'webext-options-sync';
-import { fs } from 'fs';
+import { readFileSync } from 'fs';
 import { h, render } from 'preact';
 import { Provider } from 'redux-zero/preact';
 
@@ -14,7 +14,7 @@ const INJECTED_ELEMENT_ID = 'scorumconnect-extension';
 let contentInjected = false;
 
 function injectApp(localStore){
-  const css = fs.readFileSync(`${__dirname}/build/content.css`, 'utf8');
+  const css = readFileSync(`${__dirname}/build/content.css`, 'utf8');
   const injectDiv = document.createElement('div');
   const shadowRoot = injectDiv.attachShadow({ mode: 'open' });
   shadowRoot.innerHTML = // just using template string
