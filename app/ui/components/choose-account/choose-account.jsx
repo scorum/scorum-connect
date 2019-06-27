@@ -13,6 +13,11 @@ const ChooseAccountUI = ({ accounts, trx, notificationShowed, hideNotification, 
   const accountsKeys = Object.keys(accounts);
 
   const clickHandler = (username) => {
+    if (trx.injectInto)
+    {
+      trx.params[trx.injectInto] = username;
+    }
+    
     extension.runtime.sendMessage({
       action: MESSAGE_EVENTS.EXT_SIGN_AND_BROADCAST,
       data: {
