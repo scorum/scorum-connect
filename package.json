@@ -20,7 +20,8 @@
     "build:popup": "parcel build app/popup.js -d app/build/ -o popup.js",
     "watch:popup": "parcel watch app/popup.js -d app/build/ -o popup.js --no-hmr",
     "build:all": "npm-run-all --parallel build:popup build:background build:options build:content",
-    "watch:example": "parcel example/index.html"
+    "watch:example:webapp": "parcel examples/web-app/index.html",
+    "watch:example:extension": "parcel examples/extension/popup.html"
   },
   "author": "Andrew Avdeev",
   "license": "MIT",

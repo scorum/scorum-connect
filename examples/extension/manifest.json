@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "CrossExtensionMessaging",
+  "short_name": "CEM",
+  "version": "0.1",
+  "description": "Cross-extension messaging",
+  "minimum_chrome_version": "61",
+  "icons": {
+    "48": "icon.png"
+   },
+  "optional_permissions": [
+		"http://*/*",
+		"https://*/*"
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Cross-extension messaging",
+    "default_icon": "icon.png",
+    "browser_style": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["file://*/*", "http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

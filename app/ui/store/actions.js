@@ -56,8 +56,6 @@ export const refreshProfiles = (state, profiles) => {
     account[USER_PROFILE_KEYS.VP] = profilesObject[account[USER_PROFILE_KEYS.USERNAME]].voting_power;
   });
 
-  console.log(refreshedAccounts);
-
   extensionStore.set({ accounts: refreshedAccounts });
   return { accounts: refreshedAccounts };
 };
