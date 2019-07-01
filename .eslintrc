@@ -41,6 +41,7 @@
       "requireReturnForObjectLiteral": false
     }],
     "arrow-spacing": ["error", { "before": true, "after": true }],
+    "block-spacing": ["error", "always"],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "no-underscore-dangle": 0,
     "lines-between-class-members": 0,
@@ -63,6 +64,7 @@
         "ignoreTemplateLiterals": true
       }
     ],
+    "comma-spacing": ["error", { "before": false, "after": true }],
     "no-debugger": 1,
     "no-console": 1,
     "no-mixed-operators": 0,
@@ -109,6 +111,15 @@
     "no-useless-concat": 2,
     "no-var": 2,
     "object-shorthand": 2,
+    "object-curly-spacing": ["error", "always"],
+    "object-curly-newline": ["error", {
+      "ObjectExpression": { "minProperties": 4, "multiline": true, "consistent": true },
+      "ObjectPattern": { "minProperties": 4, "multiline": true, "consistent": true },
+      "ImportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true },
+      "ExportDeclaration": { "minProperties": 4, "multiline": true, "consistent": true }
+    }],
+    "nonblock-statement-body-position": ["error", "beside", { "overrides": {} }],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "prefer-arrow-callback": 2
   }
 }

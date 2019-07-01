@@ -11,7 +11,9 @@ const extensionStore = new ExtensionStore();
 
 // TODO: add automatic persist, when store was changed
 
-export const addAccount = (state, { username, privateKey, bcProfile, profile }) => {
+export const addAccount = (state, {
+  username, privateKey, bcProfile, profile,
+}) => {
   const account = {
     [USER_PROFILE_KEYS.USERNAME]: username,
     [USER_PROFILE_KEYS.KEY]: privateKey,

@@ -4,7 +4,9 @@ import { IconScr } from '../icons/icon-scr/icon-scr';
 import { IconSp } from '../icons/icon-sp/icon-sp';
 import { IconVp } from '../icons/icon-vp/icon-vp';
 
-export const AccountItem = ({ username, sp, scr, vp, avatar, removeAccount }) => (
+export const AccountItem = ({
+  username, sp, scr, vp, avatar, removeAccount,
+}) => (
   <div class="item">
     <div class="menu-bar">
       <div class="selected-account">
